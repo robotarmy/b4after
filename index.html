@@ -1,0 +1,54 @@
+<style type="text/css" media="screen,print"> 
+  .photobox {
+    position:relative;
+    height:500px;
+    width:900px;
+  }
+  .left {
+    position:absolute;
+    background-image: url(1.jpeg);
+    top:0px;
+    left:0px;
+    z-index:25;
+    
+  }
+  .handle {
+    position:absolute;
+    top:0px;
+    left:500px;
+    width:8px;
+    z-index:100;
+    background:#CCC;
+  }
+  .right {
+    position:absolute;
+    background-image: url(2.jpeg);
+    top:0px;
+    left:0px;
+    z-index:10;
+  }
+  .viewport { 
+  }
+  .photobox .handle { cursor: pointer; }
+  .photobox .ui-draggable{ opacity: 1!important; }
+  .photobox .ui-draggable div{ background-color: #fff !important; }
+</style> 
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script> 
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.1/jquery-ui.min.js"></script> 
+
+<script type="text/javascript" src='public/javascripts/SplitView.js'> </script>
+<script type="text/javascript"> 
+  // Code that uses other library's $ can follow here.
+$(document).ready(function() {
+      var sp = new SplitView('.left','.right','.photobox')
+})
+</script> 
+
+  <div class='photobox'>
+    <div class='left viewport'>
+    </div>
+    <div class='right viewport'>
+  </div>
+</div>
+
